@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "description": "Express + MongoDB Backend API for Chandni Chauhan MERN Portfolio",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "mongoose": "^8.24.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

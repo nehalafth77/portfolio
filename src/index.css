@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #040817;
+    --bg-secondary: #0a1128;
+    --bg-card: rgba(11, 20, 48, 0.65);
+    --bg-card-hover: rgba(16, 29, 66, 0.85);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --border-color: rgba(30, 58, 138, 0.35);
+    --border-glow: rgba(59, 130, 246, 0.5);
+    --accent-blue: #2563eb;
+    --accent-blue-hover: #1d4ed8;
+    --accent-cyan: #38bdf8;
+    --glow-color: rgba(37, 99, 235, 0.3);
+  }
+
+  .light {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --bg-card-hover: rgba(255, 255, 255, 1);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: rgba(203, 213, 225, 0.8);
+    --border-glow: rgba(37, 99, 235, 0.3);
+    --accent-blue: #2563eb;
+    --accent-blue-hover: #1d4ed8;
+    --accent-cyan: #0284c7;
+    --glow-color: rgba(37, 99, 235, 0.15);
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.8);
+}
+
+/* Glassmorphic Utilities */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  box-shadow: 0 12px 40px 0 var(--glow-color);
+}
+
+.glass-nav {
+  background: rgba(4, 8, 23, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(30, 58, 138, 0.25);
+}
+
+.light .glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Custom Glow Effects */
+.blue-glow {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.6), inset 0 0 15px rgba(37, 99, 235, 0.3);
+}
+
+.blue-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(37, 99, 235, 0.8), 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.hero-ring-glow {
+  box-shadow: 0 0 50px rgba(37, 99, 235, 0.7), inset 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+/* Text Gradients */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 50%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Atmosphere SVG background */
+.starry-bg {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #38bdf8, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 230px 190px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 310px 80px, #60a5fa, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 370px 240px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 450px 160px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 520px 50px, #38bdf8, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 600px 220px, #ffffff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 650px 350px;
+}
+
+/* Pulsing subtle ambient background glow */
+@keyframes floatGlow {
+  0%, 100% {
+    transform: scale(1) translateY(0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.08) translateY(-10px);
+    opacity: 0.75;
+  }
+}
+
+.ambient-glow-circle {
+  animation: floatGlow 10s ease-in-out infinite;
+}
