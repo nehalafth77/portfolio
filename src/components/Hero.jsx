@@ -23,34 +23,34 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden flex flex-col justify-between">
       {/* Background Atmosphere Layers */}
       <div className="absolute inset-0 starry-bg opacity-70 pointer-events-none" />
-      
+
       {/* Subtle Atmospheric Blue Neon Glow Orbs */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none ambient-glow-circle" />
       <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
 
       {/* Mountain & Pine Tree Silhouette SVG Background Layer at Bottom */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden pointer-events-none opacity-40 dark:opacity-75 z-0">
-        <svg 
-          viewBox="0 0 1440 320" 
-          className="w-full h-auto min-w-[1000px] preserve-3d" 
-          fill="none" 
+        <svg
+          viewBox="0 0 1440 320"
+          className="w-full h-auto min-w-[1000px] preserve-3d"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           {/* Distant Mountain Peak Silhouette */}
-          <path 
-            d="M0 240L120 210L240 250L360 170L480 230L600 150L720 220L840 180L960 260L1080 190L1200 240L1320 180L1440 230V320H0V240Z" 
-            fill="#030712" 
-            opacity="0.9" 
+          <path
+            d="M0 240L120 210L240 250L360 170L480 230L600 150L720 220L840 180L960 260L1080 190L1200 240L1320 180L1440 230V320H0V240Z"
+            fill="#030712"
+            opacity="0.9"
           />
           {/* Midground Ridge */}
-          <path 
-            d="M0 280L180 230L340 270L520 210L700 260L880 200L1060 250L1240 210L1440 270V320H0V280Z" 
-            fill="#080e21" 
+          <path
+            d="M0 280L180 230L340 270L520 210L700 260L880 200L1060 250L1240 210L1440 270V320H0V280Z"
+            fill="#080e21"
           />
           {/* Foreground Trees & Jagged Horizon */}
-          <path 
-            d="M-20 290 L10 270 L20 290 L40 265 L60 290 L100 255 L130 290 L200 245 L250 290 L320 260 L380 295 L460 240 L520 290 L600 250 L680 300 L760 235 L840 295 L920 245 L1000 290 L1080 230 L1160 295 L1240 250 L1320 290 L1400 260 L1460 300 V320 H-20 Z" 
-            fill="#020617" 
+          <path
+            d="M-20 290 L10 270 L20 290 L40 265 L60 290 L100 255 L130 290 L200 245 L250 290 L320 260 L380 295 L460 240 L520 290 L600 250 L680 300 L760 235 L840 295 L920 245 L1000 290 L1080 230 L1160 295 L1240 250 L1320 290 L1400 260 L1460 300 V320 H-20 Z"
+            fill="#020617"
           />
         </svg>
       </div>
@@ -58,9 +58,9 @@ const Hero = () => {
       {/* Hero Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* LEFT SIDE: Typography & CTA Controls */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -73,8 +73,8 @@ const Hero = () => {
 
             {/* Main Name Heading */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
-              <span className="text-blue-500 dark:text-blue-400">Chandni</span>{' '}
-              <span className="text-slate-900 dark:text-white">Chauhan</span>
+              <span className="text-blue-500 dark:text-blue-400">Nehala</span>{' '}
+              <span className="text-slate-900 dark:text-white">Fathima</span>
             </h1>
 
             {/* Subheading Role */}
@@ -135,14 +135,14 @@ const Hero = () => {
           </motion.div>
 
           {/* RIGHT SIDE: Profile Portrait with Glowing Blue Ring Halo */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
             className="lg:col-span-5 flex justify-center items-center relative"
           >
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px] flex items-center justify-center">
-              
+
               {/* Electric Blue Neon Circular Ring Halo (Matching Reference Screenshot) */}
               <div className="absolute inset-0 rounded-full border-2 border-blue-500/80 shadow-[0_0_40px_rgba(37,99,235,0.7),inset_0_0_20px_rgba(59,130,246,0.5)] animate-pulse" />
 
@@ -152,14 +152,14 @@ const Hero = () => {
               {/* Profile Image Container with Soft Gradient Masking */}
               <div className="relative w-[92%] h-[92%] rounded-full overflow-hidden flex items-end justify-center z-10">
                 <img
-                  src={profileImg}
+                  src="https://res.cloudinary.com/zqgmlaym/image/upload/f_auto,q_auto/nehala"
                   alt="Chandni Chauhan - Frontend Developer"
                   className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105"
                   onError={(e) => {
                     e.target.src = '/assets/profile.png';
                   }}
                 />
-                
+
                 {/* Bottom Smooth Blend Gradient into Atmosphere */}
                 <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-[#040817] via-[#040817]/60 to-transparent pointer-events-none" />
               </div>

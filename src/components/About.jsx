@@ -14,10 +14,10 @@ const About = () => {
   return (
     <section id="about" className="py-20 relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -25,7 +25,7 @@ const About = () => {
           >
             About Me
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -38,9 +38,9 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Image Card with Glass Accent */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -50,15 +50,15 @@ const About = () => {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Outer Glow Halo */}
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-3xl opacity-30 blur-xl" />
-              
+
               <div className="relative rounded-3xl overflow-hidden glass-card p-3 border border-blue-500/30">
-                <img 
-                  src={profileImg} 
-                  alt="Chandni Chauhan Profile" 
+                <img
+                  src="https://res.cloudinary.com/zqgmlaym/image/upload/f_auto,q_auto/nehala"
+                  alt="Chandni Chauhan Profile"
                   className="w-full h-auto rounded-2xl object-cover"
                   onError={(e) => { e.target.src = '/assets/profile.png'; }}
                 />
-                
+
                 {/* Floating Experience Badge Overlay */}
                 <div className="absolute bottom-6 right-6 glass-card p-4 rounded-2xl border border-blue-400/40 shadow-2xl flex items-center space-x-3 bg-slate-900/80 backdrop-blur-md">
                   <div className="p-3 bg-blue-600 rounded-xl text-white shadow-[0_0_15px_rgba(37,99,235,0.6)]">
@@ -74,7 +74,7 @@ const About = () => {
           </motion.div>
 
           {/* Right Column: Biography Details */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

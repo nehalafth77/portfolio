@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp } from 'lucide-react';
-import { GithubIcon, TwitterIcon, LinkedinIcon, MailIcon } from './SocialIcons';
+import { GithubIcon, whatsappIcon, LinkedinIcon, MailIcon } from './SocialIcons';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: GithubIcon, href: 'https://github.com', label: 'GitHub' },
-    { icon: TwitterIcon, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: whatsappIcon, href: 'https://Whatsapp.com', label: 'Whatsapp' },
     { icon: LinkedinIcon, href: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: MailIcon, href: 'mailto:chandni.chauhan@example.com', label: 'Email' },
   ];
@@ -26,13 +26,13 @@ const Footer = () => {
   return (
     <footer className="relative z-10 bg-slate-950 border-t border-slate-800/80 pt-16 pb-12 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800/60 items-center">
-          
+
           {/* Logo & Info */}
           <div className="md:col-span-5 space-y-4">
             <a href="#home" className="text-3xl font-extrabold tracking-tight inline-block">
-              <span className="text-white">Portfolio</span>
+              <span className="text-white">Nehala</span>
               <span className="text-blue-500 font-black">.</span>
             </a>
             <p className="text-sm max-w-sm text-slate-400 leading-relaxed">
@@ -86,7 +86,7 @@ const Footer = () => {
 
         {/* Copyright Banner */}
         <div className="pt-8 text-center text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Chandni Chauhan. Built with MERN Stack (React, Tailwind CSS, Node.js, Express & MongoDB).</p>
+          <p>© {new Date().getFullYear()} Nehala Fathima. Built with MERN Stack (React, Tailwind CSS, Node.js, Express & MongoDB).</p>
         </div>
 
       </div>

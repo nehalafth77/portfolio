@@ -57,17 +57,16 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass-nav py-3.5 shadow-xl' : 'bg-transparent py-5'
-    }`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass-nav py-3.5 shadow-xl' : 'bg-transparent py-5'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <a 
-          href="#home" 
+        <a
+          href="#home"
           onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
           className="text-2xl sm:text-3xl font-extrabold tracking-tight transition-transform duration-200 hover:scale-105"
         >
-          <span className="text-slate-900 dark:text-white">Portfolio</span>
+          <span className="text-slate-900 dark:text-white">Nehala</span>
           <span className="text-blue-500 font-black">.</span>
         </a>
 
@@ -79,11 +78,10 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-                  isActive 
-                    ? 'text-blue-500 dark:text-blue-400 font-semibold' 
+                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 ${isActive
+                    ? 'text-blue-500 dark:text-blue-400 font-semibold'
                     : 'text-slate-600 dark:text-slate-300 hover:text-blue-500 dark:hover:text-blue-400'
-                }`}
+                  }`}
               >
                 {item.label}
                 {isActive && (
@@ -107,8 +105,8 @@ const Navbar = () => {
 
           {/* Download CV CTA */}
           <a
-            href="/Chandni_Chauhan_CV.pdf"
-            download="Chandni_Chauhan_CV.pdf"
+            href="/Nehala-ATS.pdf"
+            download="Nehala-ATS.pdf"
             className="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 border border-blue-400/30"
           >
             Download CV
@@ -144,11 +142,10 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-4 py-2.5 rounded-lg text-base font-medium transition-all ${
-                    isActive 
-                      ? 'bg-blue-600/20 text-blue-400 font-semibold border-l-4 border-blue-500' 
+                  className={`text-left px-4 py-2.5 rounded-lg text-base font-medium transition-all ${isActive
+                      ? 'bg-blue-600/20 text-blue-400 font-semibold border-l-4 border-blue-500'
                       : 'text-slate-300 hover:bg-slate-800/50'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>

@@ -41,19 +41,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Address',
-      value: 'chandni.chauhan@example.com',
-      link: 'mailto:chandni.chauhan@example.com',
+      value: 'nehalafathima05@gmail.com',
+      link: 'mailto:nehalafathima05@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone Number',
-      value: '+91 98765 43210',
-      link: 'tel:+919876543210',
+      value: '+91 8590618822',
+      link: 'tel:+918590618822',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Bangalore, Karnataka, India',
+      value: 'kollam, Kerala, India',
       link: '#',
     },
   ];
@@ -61,10 +61,10 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ const Contact = () => {
           >
             Get In Touch
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -88,9 +88,9 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
+
           {/* Left Column: Contact Info Cards */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -144,7 +144,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Right Column: Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -153,7 +153,7 @@ const Contact = () => {
           >
             <div className="glass-card rounded-3xl p-8 sm:p-10 border border-blue-900/40 shadow-2xl">
               <form onSubmit={handleSubmit} className="space-y-6">
-                
+
                 {/* Feedback Alerts */}
                 {status.success && (
                   <div className="p-4 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center space-x-3">

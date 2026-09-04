@@ -21,17 +21,17 @@ const Projects = () => {
 
   const categories = ['All', 'Full Stack', 'Frontend'];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : projects.filter(p => p.category === activeFilter || p.technologies?.includes(activeFilter));
 
   return (
     <section id="projects" className="py-20 relative z-10 bg-slate-950/40 dark:bg-[#030712]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -39,7 +39,7 @@ const Projects = () => {
           >
             Portfolio Showcase
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -60,11 +60,10 @@ const Projects = () => {
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                activeFilter === cat
+              className={`px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${activeFilter === cat
                   ? 'bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.5)] border border-blue-400/40'
                   : 'glass-card text-slate-400 hover:text-white hover:border-blue-500/40'
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -79,7 +78,7 @@ const Projects = () => {
           </div>
         ) : (
           /* Projects Grid */
-          <motion.div 
+          <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
           >
@@ -96,9 +95,9 @@ const Projects = () => {
                 >
                   {/* Project Image */}
                   <div className="relative h-60 w-full overflow-hidden bg-slate-900">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
+                    <img
+                      src={project.image}
+                      alt={project.title}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80" />
@@ -118,7 +117,7 @@ const Projects = () => {
                     {/* Tech Badges */}
                     <div className="flex flex-wrap gap-2 pt-2">
                       {project.technologies?.map((tech, idx) => (
-                        <span 
+                        <span
                           key={idx}
                           className="text-xs font-medium px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
                         >
