@@ -33,7 +33,7 @@ const Contact = () => {
         setStatus(prev => ({ ...prev, success: false }));
       }, 5000);
     } catch (err) {
-      setStatus({ loading: false, success: false, error: err.message || 'Error submitting message' });
+      setStatus({ loading: false, success: false, error: err.text || err.message || 'Error submitting message' });
     }
   };
 

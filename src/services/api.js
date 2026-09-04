@@ -1,4 +1,10 @@
+import emailjs from '@emailjs/browser';
+
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_vrbgb4v';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_gqold5g';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '21zB4BTov-tLffPNI';
 
 // Fallback project data matching MERN showcase requirements
 export const fallbackProjects = [
@@ -57,27 +63,34 @@ export const fetchProjects = async () => {
 };
 
 export const sendContactMessage = async (formData) => {
+  const templateParams = {
+    from_name: formData.name,
+    from_email: formData.email,
+    subject: formData.subject,
+    message: formData.message,
+  };
+
+  // Send email via EmailJS
+  const response = await emailjs.send(
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+    templateParams,
+    EMAILJS_PUBLIC_KEY
+  );
+
+  // Optional: Save to backend database asynchronously if server is running
   try {
-    const res = await fetch(`${API_BASE_URL}/contact`, {
+    fetch(`${API_BASE_URL}/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-    });
-
-    if (!res.ok) {
-      const errorData = await res.json();
-      throw new Error(errorData.message || 'Failed to submit contact message');
-    }
-
-    return await res.json();
-  } catch (err) {
-    // If backend server is offline, return simulated successful submission
-    if (err.message.includes('Failed to fetch') || err.message.includes('NetworkError')) {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      return { success: true, message: 'Message sent successfully (Demo Mode)!' };
-    }
-    throw err;
+    }).catch(() => {});
+  } catch (e) {
+    // Ignore backend errors if offline
   }
+
+  return response;
 };
+
