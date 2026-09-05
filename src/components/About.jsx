@@ -60,13 +60,13 @@ const About = () => {
                 />
 
                 {/* Floating Experience Badge Overlay */}
-                <div className="absolute bottom-6 right-6 glass-card p-4 rounded-2xl border border-blue-400/40 shadow-2xl flex items-center space-x-3 bg-slate-900/80 backdrop-blur-md">
+                <div className="absolute bottom-6 right-6 p-4 rounded-2xl border border-slate-200 dark:border-blue-400/40 shadow-2xl flex items-center space-x-3 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md">
                   <div className="p-3 bg-blue-600 rounded-xl text-white shadow-[0_0_15px_rgba(37,99,235,0.6)]">
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-white">2+ Years</h4>
-                    <p className="text-xs text-slate-400 font-medium">Professional Experience</p>
+                    <h4 className="text-xl font-bold text-slate-900 dark:text-white">2+ Years</h4>
+                    <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">Professional Experience</p>
                   </div>
                 </div>
               </div>

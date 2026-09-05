@@ -126,7 +126,7 @@ const Hero = () => {
                 onClick={scrollToContact}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
-                className="px-8 py-3.5 bg-slate-900/40 dark:bg-slate-950/40 hover:bg-blue-600/10 text-slate-900 dark:text-white font-semibold rounded-xl border-2 border-blue-600/80 hover:border-blue-500 shadow-lg backdrop-blur-md transition-all duration-300 flex items-center justify-center group"
+                className="px-8 py-3.5 bg-white/80 dark:bg-slate-950/40 hover:bg-blue-600/10 text-slate-900 dark:text-white font-semibold rounded-xl border-2 border-blue-600/80 hover:border-blue-500 shadow-lg backdrop-blur-md transition-all duration-300 flex items-center justify-center group"
               >
                 Contact Me
                 <ChevronRight className="w-5 h-5 ml-1 text-blue-500 group-hover:translate-x-1 transition-transform" />
