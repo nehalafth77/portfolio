@@ -65,7 +65,7 @@ const About = () => {
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-white">10+ Years</h4>
+                    <h4 className="text-xl font-bold text-white">2+ Years</h4>
                     <p className="text-xs text-slate-400 font-medium">Professional Experience</p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ const About = () => {
             </h3>
 
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
-              Hello! I'm <strong className="text-blue-500">Chandni Chauhan</strong>, a passionate Frontend Developer dedicated to constructing scalable, visually stunning, and highly intuitive web applications. Over the past decade, I have collaborated with global clients, startups, and enterprises to turn complex ideas into seamless digital solutions.
+              Hello! I'm <strong className="text-blue-500">Nehala Fathima</strong>, a passionate Frontend Developer dedicated to constructing scalable, visually stunning, and highly intuitive web applications. Over the past decade, I have collaborated with global clients, startups, and enterprises to turn complex ideas into seamless digital solutions.
             </p>
 
             <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
@@ -111,7 +111,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-white">B.Tech in Computer Science</h4>
-                  <p className="text-xs text-slate-400">Graduated with Honors</p>
+                  <p className="text-xs text-slate-400">MES Institute, Kollam (KTU) · 2023-2027</p>
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ const About = () => {
                   <Briefcase className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Senior Frontend Lead</h4>
+                  <h4 className="text-sm font-semibold text-white">Front-End Developer</h4>
                   <p className="text-xs text-slate-400">Building High-Scale Web Apps</p>
                 </div>
               </div>
@@ -129,8 +129,8 @@ const About = () => {
             {/* CTA Button */}
             <div className="pt-4">
               <a
-                href="/Chandni_Chauhan_CV.pdf"
-                download="Chandni_Chauhan_CV.pdf"
+                href="/Nehala-ATS.pdf"
+                download="Nehala_Fathima_CV.pdf"
                 className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-105"
               >
                 <Download className="w-4 h-4 mr-2" />

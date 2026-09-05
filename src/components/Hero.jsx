@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
-import { GithubIcon, TwitterIcon, LinkedinIcon, MailIcon } from './SocialIcons';
+import { GithubIcon, FaWhatsappIcon, LinkedinIcon, MailIcon } from './SocialIcons';
 import profileImg from '../assets/profile.png';
 
 const Hero = () => {
@@ -13,10 +13,10 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { icon: GithubIcon, href: 'https://github.com', label: 'GitHub' },
-    { icon: TwitterIcon, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: LinkedinIcon, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: MailIcon, href: 'mailto:chandni.chauhan@example.com', label: 'Email' },
+    { icon: GithubIcon, href: 'https://github.com/nehalafth77', label: 'GitHub' },
+    { icon: FaWhatsappIcon, href: 'https://wa.me/918590618822', label: 'WhatsApp' },
+    { icon: LinkedinIcon, href: 'https://www.linkedin.com/in/nehala-fathima-n-7035a7350/', label: 'LinkedIn' },
+    { icon: MailIcon, href: 'mailto:nehalafathima05@gmail.com', label: 'Email' },
   ];
 
   return (
