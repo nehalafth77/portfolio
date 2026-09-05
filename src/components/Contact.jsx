@@ -182,7 +182,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Alex Morgan"
-                      className="w-full px-4 py-3.5 rounded-xl bg-slate-900/60 dark:bg-slate-900/80 border border-slate-700 dark:border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm"
                     />
                   </div>
 
@@ -198,7 +198,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="e.g. alex@example.com"
-                      className="w-full px-4 py-3.5 rounded-xl bg-slate-900/60 dark:bg-slate-900/80 border border-slate-700 dark:border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm"
                     />
                   </div>
                 </div>
@@ -215,7 +215,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Project Inquiry / Hiring"
-                    className="w-full px-4 py-3.5 rounded-xl bg-slate-900/60 dark:bg-slate-900/80 border border-slate-700 dark:border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm"
                   />
                 </div>
 
@@ -231,7 +231,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Tell me about your project goals, timeline, and scope..."
-                    className="w-full px-4 py-3.5 rounded-xl bg-slate-900/60 dark:bg-slate-900/80 border border-slate-700 dark:border-slate-800 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm resize-none"
+                    className="w-full px-4 py-3.5 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm resize-none"
                   />
                 </div>
 

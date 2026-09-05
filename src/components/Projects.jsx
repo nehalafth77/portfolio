@@ -132,7 +132,7 @@ const Projects = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-slate-900/60 hover:bg-blue-600/20 border border-slate-700 hover:border-blue-500 text-slate-300 hover:text-white text-sm font-semibold transition-all duration-300"
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-900/60 hover:bg-blue-600/10 dark:hover:bg-blue-600/20 border border-slate-300 dark:border-slate-700 hover:border-blue-500 text-slate-800 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white text-sm font-semibold transition-all duration-300"
                       >
                         <GithubIcon className="w-4 h-4 mr-2 text-blue-400" />
                         Code Repository

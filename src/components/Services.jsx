@@ -46,7 +46,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-blue-500 font-semibold tracking-wider text-sm uppercase px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20"
+            className="text-blue-600 dark:text-blue-400 font-semibold tracking-wider text-sm uppercase px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20"
           >
             What I Offer
           </motion.span>
@@ -55,11 +55,11 @@ const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mt-4 tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-slate-50 mt-4 tracking-tight"
           >
-            Specialized <span className="text-blue-500">Services</span>
+            Specialized <span className="text-blue-600 dark:text-blue-400">Services</span>
           </motion.h2>
-          <p className="text-slate-600 dark:text-slate-400 mt-3 text-base">
+          <p className="text-slate-600 dark:text-slate-300 mt-3 text-base font-normal">
             Delivering high-quality web solutions tailored to meet modern enterprise and user demands.
           </p>
           <div className="w-20 h-1.5 bg-blue-500 mx-auto mt-4 rounded-full shadow-[0_0_12px_#3b82f6]" />
@@ -77,26 +77,26 @@ const Services = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
                 whileHover={{ y: -8 }}
-                className="glass-card rounded-2xl p-8 border border-blue-900/40 hover:border-blue-500/60 shadow-xl flex flex-col justify-between group transition-all duration-300"
+                className="glass-card rounded-2xl p-8 border border-slate-200 dark:border-blue-900/40 hover:border-blue-500/60 shadow-xl flex flex-col justify-between group transition-all duration-300"
               >
                 <div>
                   {/* Service Icon Badge */}
-                  <div className="w-14 h-14 rounded-2xl bg-blue-600/15 border border-blue-500/30 flex items-center justify-center text-blue-500 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all duration-300 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-blue-500/10 dark:bg-blue-600/15 border border-blue-500/20 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all duration-300 mb-6">
                     <IconComp className="w-7 h-7" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 font-normal">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="flex items-center text-blue-500 font-semibold text-sm group-hover:translate-x-1.5 transition-transform">
+                <div className="flex items-center text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:translate-x-1.5 transition-transform">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-1.5" />
                 </div>

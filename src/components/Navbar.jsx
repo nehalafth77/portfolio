@@ -153,8 +153,8 @@ const Navbar = () => {
             })}
             <div className="pt-3 border-t border-slate-800">
               <a
-                href="/Chandni_Chauhan_CV.pdf"
-                download="Chandni_Chauhan_CV.pdf"
+                href="/Nehala-ATS.pdf"
+                download="Nehala_Fathima_CV.pdf"
                 className="w-full flex items-center justify-center px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-lg"
               >
                 Download CV

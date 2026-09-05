@@ -105,23 +105,23 @@ const About = () => {
 
             {/* Quick Education & Experience Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <div className="glass-card p-4 rounded-xl border border-slate-800 flex items-start space-x-3">
-                <div className="p-2.5 bg-blue-500/10 text-blue-400 rounded-lg shrink-0">
+              <div className="glass-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 flex items-start space-x-3">
+                <div className="p-2.5 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-lg shrink-0">
                   <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">B.Tech in Computer Science</h4>
-                  <p className="text-xs text-slate-400">MES Institute, Kollam (KTU) · 2023-2027</p>
+                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white">B.Tech in Computer Science</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-400">MES Institute, Kollam (KTU) · 2023-2027</p>
                 </div>
               </div>
 
-              <div className="glass-card p-4 rounded-xl border border-slate-800 flex items-start space-x-3">
-                <div className="p-2.5 bg-blue-500/10 text-blue-400 rounded-lg shrink-0">
+              <div className="glass-card p-4 rounded-xl border border-slate-200 dark:border-slate-800 flex items-start space-x-3">
+                <div className="p-2.5 bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-lg shrink-0">
                   <Briefcase className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white">Front-End Developer</h4>
-                  <p className="text-xs text-slate-400">Building High-Scale Web Apps</p>
+                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Front-End Developer</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-400">Building High-Scale Web Apps</p>
                 </div>
               </div>
             </div>
