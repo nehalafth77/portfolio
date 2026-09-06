@@ -1,7 +1,13 @@
+import emailjs from '@emailjs/browser';
+
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
-// Web3Forms - No OAuth needed, emails delivered directly to your inbox
-// Get your free access key at: https://web3forms.com
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_vrbgb4v';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_gqold5g';
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '21zB4BTov-tLffPNI';
+
+// Optional Web3Forms fallback
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || '';
 
 // Fallback project data
@@ -60,38 +66,55 @@ export const fetchProjects = async () => {
   }
 };
 
-export const sendContactMessage = async (formData) => {
-  if (!WEB3FORMS_ACCESS_KEY) {
-    throw new Error('Contact form is not configured yet. Please email nehalafathima05@gmail.com directly.');
-  }
-
-  const payload = {
-    access_key: WEB3FORMS_ACCESS_KEY,
-    name: formData.name,
-    email: formData.email,
-    subject: formData.subject || 'New Portfolio Contact Message',
-    message: formData.message,
-    from_name: 'Nehala Fathima Portfolio',
-  };
-
-  const res = await fetch('https://api.web3forms.com/submit', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify(payload),
-  });
-
-  const data = await res.json();
-
-  if (!res.ok || data.success === false) {
-    throw new Error(data.message || 'Failed to send message. Please try again.');
-  }
-
-  // Also save to backend database asynchronously if server is active
+const saveToBackend = (formData) => {
   fetch(`${API_BASE_URL}/contact`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData),
   }).catch(() => {});
+};
 
-  return data;
+export const sendContactMessage = async (formData) => {
+  const templateParams = {
+    from_name: formData.name,
+    from_email: formData.email,
+    subject: formData.subject || 'New Portfolio Contact Message',
+    message: formData.message,
+  };
+
+  // If a valid Web3Forms key is configured, try it
+  if (WEB3FORMS_ACCESS_KEY && !WEB3FORMS_ACCESS_KEY.includes('YOUR_WEB3FORMS')) {
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || 'New Portfolio Contact Message',
+          message: formData.message,
+          from_name: 'Nehala Fathima Portfolio',
+        }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success !== false) {
+        saveToBackend(formData);
+        return data;
+      }
+    } catch (web3Err) {
+      console.warn('Web3Forms failed, falling back to EmailJS:', web3Err);
+    }
+  }
+
+  // Primary sending via EmailJS
+  const response = await emailjs.send(
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+    templateParams,
+    EMAILJS_PUBLIC_KEY
+  );
+
+  saveToBackend(formData);
+  return response;
 };

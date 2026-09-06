@@ -34,10 +34,12 @@ const Contact = () => {
       }, 5000);
     } catch (err) {
       const rawError = err?.text || err?.message || String(err || '');
-      let errorMsg = 'Error sending message. Please try emailing directly at nehalafathima05@gmail.com';
+      let errorMsg = 'Failed to send message. Please try emailing directly at nehalafathima05@gmail.com';
       
       if (rawError.includes('Gmail_API') || rawError.includes('scopes') || rawError.includes('authentication')) {
-        errorMsg = 'EmailJS Gmail connection requires re-authentication in EmailJS dashboard. In the meantime, please click to email directly: nehalafathima05@gmail.com';
+        errorMsg = 'Gmail service permission needs reconnection in EmailJS dashboard. Please use the direct email link below.';
+      } else if (rawError) {
+        errorMsg = rawError;
       }
       setStatus({ loading: false, success: false, error: errorMsg });
     }
@@ -169,9 +171,19 @@ const Contact = () => {
                 )}
 
                 {status.error && (
-                  <div className="p-4 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-400 flex items-center space-x-3">
-                    <AlertCircle className="w-5 h-5 shrink-0" />
-                    <span className="text-sm font-medium">{status.error}</span>
+                  <div className="p-4 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-400 space-y-2">
+                    <div className="flex items-start space-x-3">
+                      <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
+                      <span className="text-sm font-medium leading-relaxed">{status.error}</span>
+                    </div>
+                    <div className="pl-8">
+                      <a
+                        href={`mailto:nehalafathima05@gmail.com?subject=${encodeURIComponent(formData.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(`Hi Nehala,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`}
+                        className="inline-flex items-center text-xs font-semibold text-rose-300 hover:text-white underline transition-colors"
+                      >
+                        Send message directly via email client &rarr;
+                      </a>
+                    </div>
                   </div>
                 )}
 
