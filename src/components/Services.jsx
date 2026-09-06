@@ -2,7 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Layers, Smartphone, Palette, Cpu, Zap, ArrowRight } from 'lucide-react';
 
+
+
 const Services = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const offsetPosition = elementRect - bodyRect - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   const servicesList = [
     {
       icon: Code,
@@ -96,10 +113,17 @@ const Services = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:translate-x-1.5 transition-transform">
-                  <span>Inquire for project</span>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToContact();
+                  }}
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:translate-x-1.5 transition-transform cursor-pointer"
+                >
+                  <span>Inquire for Project</span>
                   <ArrowRight className="w-4 h-4 ml-1.5" />
-                </div>
+                </a>
               </motion.div>
             );
           })}
