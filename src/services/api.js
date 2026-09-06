@@ -70,23 +70,23 @@ export const sendContactMessage = async (formData) => {
     message: formData.message,
   };
 
-  // Send email via EmailJS
-  const response = await emailjs.send(
-    EMAILJS_SERVICE_ID,
-    EMAILJS_TEMPLATE_ID,
-    templateParams,
-    EMAILJS_PUBLIC_KEY
-  );
-
-  // Optional: Save to backend database asynchronously if server is running
   try {
+    // Send email via EmailJS
+    const response = await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateParams,
+      EMAILJS_PUBLIC_KEY
+    );
+
+    // Also save to backend database asynchronously if server is active
     fetch(`${API_BASE_URL}/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-    }).catch(() => {});
+    }).catch(() => { });
   } catch (e) {
     // Ignore backend errors if offline
   }

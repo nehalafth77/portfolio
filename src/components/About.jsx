@@ -5,10 +5,10 @@ import profileImg from '../assets/profile.png';
 
 const About = () => {
   const highlights = [
-    'Specialized in React, Modern JavaScript & UI Architecture',
+    'Specialized in React, Modern JavaScript & UI',
     'Responsive cross-platform design specialist',
     'Clean, modular, & maintainable production code',
-    'End-to-end MERN stack web application development',
+    'End-to-end MERN stack web application',
   ];
 
   return (
@@ -53,7 +53,7 @@ const About = () => {
 
               <div className="relative rounded-3xl overflow-hidden glass-card p-3 border border-blue-500/30">
                 <img
-                  src="https://res.cloudinary.com/zqgmlaym/image/upload/f_auto,q_auto/nehala"
+                  src="https://res.cloudinary.com/nmrxsjhh/image/upload/v1788673873/WhatsApp_Image_2026-09-06_at_11.14.31_AM_y3ilkn.jpg"
                   alt="Chandni Chauhan Profile"
                   className="w-full h-auto rounded-2xl object-cover"
                   onError={(e) => { e.target.src = '/assets/profile.png'; }}
@@ -65,7 +65,7 @@ const About = () => {
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-slate-900 dark:text-white">2+ Years</h4>
+                    <h4 className="text-xl font-bold text-slate-900 dark:text-white">1+ Years</h4>
                     <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">Professional Experience</p>
                   </div>
                 </div>
@@ -86,11 +86,11 @@ const About = () => {
             </h3>
 
             <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
-              Hello! I'm <strong className="text-blue-500">Nehala Fathima</strong>, a passionate Frontend Developer dedicated to constructing scalable, visually stunning, and highly intuitive web applications. Over the past decade, I have collaborated with global clients, startups, and enterprises to turn complex ideas into seamless digital solutions.
+              Hello! I'm <strong className="text-blue-500">Nehala Fathima</strong>,a passionate Frontend Developer who loves turning ideas into responsive, interactive, and visually engaging web experiences. I work with React.js, Tailwind CSS, JavaScript, Node.js, and MongoDB, focusing on clean code, modern design, and seamless user experiences.
             </p>
 
             <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-              My expertise spans the modern React ecosystem, Tailwind CSS, Node.js, and MongoDB. I pride myself on writing clean, modular code and crafting pixel-perfect interfaces with smooth micro-interactions.
+              I’m always learning, building, and exploring new technologies to create better digital experiences.
             </p>
 
             {/* Feature Highlights Grid */}
@@ -121,7 +121,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Front-End Developer</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">Building High-Scale Web Apps</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-400">PromptLogix • 2026 - Present</p>
                 </div>
               </div>
             </div>

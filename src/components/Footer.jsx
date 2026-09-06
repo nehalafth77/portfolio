@@ -80,8 +80,13 @@ const Footer = () => {
         </div>
 
         {/* Copyright Banner */}
-        <div className="pt-8 text-center text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Nehala Fathima. Built with MERN Stack (React, Tailwind CSS, Node.js, Express & MongoDB).</p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <p>© {new Date().getFullYear()} Nehala Fathima. All rights reserved.</p>
+          <p className="flex items-center gap-1.5">
+            <span>Powered by</span>
+            <span className="text-fuchsia-500">•</span>
+            <span>PromptLogix</span>
+          </p>
         </div>
 
       </div>

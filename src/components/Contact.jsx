@@ -33,7 +33,13 @@ const Contact = () => {
         setStatus(prev => ({ ...prev, success: false }));
       }, 5000);
     } catch (err) {
-      setStatus({ loading: false, success: false, error: err.text || err.message || 'Error submitting message' });
+      const rawError = err?.text || err?.message || String(err || '');
+      let errorMsg = 'Error sending message. Please try emailing directly at nehalafathima05@gmail.com';
+      
+      if (rawError.includes('Gmail_API') || rawError.includes('scopes') || rawError.includes('authentication')) {
+        errorMsg = 'EmailJS Gmail connection requires re-authentication in EmailJS dashboard. In the meantime, please click to email directly: nehalafathima05@gmail.com';
+      }
+      setStatus({ loading: false, success: false, error: errorMsg });
     }
   };
 

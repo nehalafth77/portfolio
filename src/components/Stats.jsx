@@ -6,22 +6,22 @@ const Stats = () => {
   const statsData = [
     {
       icon: User,
-      number: '10+',
+      number: '1+',
       label: 'Years of Experience',
     },
     {
       icon: Code,
-      number: '30+',
+      number: '5+',
       label: 'Projects Completed',
     },
     {
       icon: GraduationCap,
-      number: '5+',
+      number: '8+',
       label: 'Technologies Mastered',
     },
     {
       icon: Users,
-      number: '100+',
+      number: '10+',
       label: 'Happy Clients',
     },
   ];

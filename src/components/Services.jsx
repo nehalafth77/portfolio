@@ -97,7 +97,7 @@ const Services = () => {
                 </div>
 
                 <div className="flex items-center text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:translate-x-1.5 transition-transform">
-                  <span>Learn More</span>
+                  <span>Inquire for project</span>
                   <ArrowRight className="w-4 h-4 ml-1.5" />
                 </div>
               </motion.div>
